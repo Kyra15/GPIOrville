@@ -7,7 +7,9 @@ GPIO.setmode(GPIO.BOARD)
 motor1fwd = 21
 motor1rev = 22
 motor2fwd = 23
-motor2rev = 24 #pwm pin
+motor2rev = 24
+
+#pwm pin
 
 fwdmotor = [motor1fwd, motor2fwd]
 revmotor = [motor1rev, motor2rev]
