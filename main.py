@@ -26,4 +26,3 @@ GPIO.output(fwdmotor, GPIO.LOW)
 GPIO.output(revmotor, GPIO.LOW)
 
 print("Done")
-
