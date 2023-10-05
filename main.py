@@ -2,7 +2,7 @@ from time import sleep
 
 import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.BOARD)
+GPIO.setmode(GPIO.BCM)
 
 pwm = GPIO.PWM(24, 200)
 pwm.start(50)
