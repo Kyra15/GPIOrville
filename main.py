@@ -27,4 +27,3 @@ GPIO.output(revmotor, GPIO.LOW)
 
 print("Done")
 
-#enter personal access token instead of password
