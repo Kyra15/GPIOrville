@@ -1,13 +1,13 @@
 from time import sleep
 
-import OPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.SUNXI)
+GPIO.setmode(GPIO.BOARD)
 
-motor1fwd = 'PA7'
-motor1rev = 'PA8'
-motor2fwd = 'PA9'
-motor2rev = 'PA10'
+motor1fwd = 21
+motor1rev = 22
+motor2fwd = 23
+motor2rev = 24 #pwm pin
 
 fwdmotor = [motor1fwd, motor2fwd]
 revmotor = [motor1rev, motor2rev]
