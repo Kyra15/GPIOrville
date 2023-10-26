@@ -11,7 +11,7 @@ class Tank:
     def __init__(self):
         GPIO.setmode(GPIO.BCM)
 
-        # set pin numbers for each wire (these are approximations and will be update once we get the robot working)
+        # sets pin numbers for each wire (these are approximations and will be update once we get the robot working)
         self.motor1fwd = 21
         self.motor1rev = 22
         self.motor2fwd = 23
