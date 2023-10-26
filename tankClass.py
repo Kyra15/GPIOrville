@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 
 # create the tank class
 class Tank:
-    # when the program start, set the gpio mode to bcm so you can use numbers for pins
+    # when the program starts, set the gpio mode to bcm so we can use numbers for pins
     def __init__(self):
         GPIO.setmode(GPIO.BCM)
 
