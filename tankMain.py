@@ -1,4 +1,4 @@
 from tankClass import Tank
 
 tank = Tank()
-tank.forward(0.5, 1000)
+tank.forward(0.5, 800)
