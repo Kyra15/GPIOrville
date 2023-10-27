@@ -1,26 +1,17 @@
 from time import sleep
-
-import RPi.GPIO as GPIO
+import board
+import adafruit_motorkit import MotorKit
 
 
 class Tank:
-    def __init__(self):
-        GPIO.setmode(GPIO.BCM)
-
-        self.motor1fwd = 21
-        self.motor1rev = 22
-        self.motor2fwd = 23
-        self.motor2rev = 24 #pwm pin
-        self.fwdmotor = [self.motor1fwd, self.motor2fwd]
-        self.revmotor = [self.motor1rev, self.motor2rev]
-
-        GPIO.setup(self.motor1fwd, GPIO.OUT)
-        GPIO.setup(self.motor2fwd, GPIO.OUT)
+    def __init__(self, speed):
+        self.speed = speed
+        self.kit = MotorKit(i2c=board.I2C(), pwm_frequency=speed)
 
     def forward(self, time):
-        GPIO.output(self.fwdmotor, GPIO.HIGH)
-        sleep(time)
+        self.kit.motor1.throttle = 1.0
+        time.sleep(time)
+
 
     def stop(self):
-        GPIO.output(self.fwdmotor, GPIO.LOW)
-        GPIO.output(self.revmotor, GPIO.LOW)
+        self.kit.motor1.throttle = 0
