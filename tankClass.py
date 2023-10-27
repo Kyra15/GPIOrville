@@ -1,7 +1,6 @@
 from time import sleep
 import board
-import adafruit_motorkit import MotorKit
-
+from adafruit_motorkit import MotorKit
 
 
 class Tank:
@@ -11,7 +10,7 @@ class Tank:
 
     def forward(self, time):
         self.kit.motor1.throttle = 1.0
-        time.sleep(time)
+        sleep(time)
 
 
     def stop(self):
